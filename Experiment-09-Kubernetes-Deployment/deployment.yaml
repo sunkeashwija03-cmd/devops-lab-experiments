@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-hello
+  template:
+    metadata:
+      labels:
+        app: devops-hello
+    spec:
+      containers:
+        - name: devops-hello
+          image: YOUR_DOCKERHUB_USERNAME/devops-hello:latest
+          imagePullPolicy: Always

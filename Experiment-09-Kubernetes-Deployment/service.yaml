@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-hello-service
+spec:
+  selector:
+    app: devops-hello
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
